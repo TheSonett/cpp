@@ -8,12 +8,12 @@ void* operator new(size_t size) {
 
 	s_Allcation++;
 	std::cout << "Allocation " << size << " bytes\n";
-	return malloc(size);
+	return malloc(size); // malloc return a void pointer, that's why the return type of this function is void
 }
 
 
 // Turn ON & OFF string_view
-#define STRING_VIEW 1
+#define STRING_VIEW 0
 
 
 #if STRING_VIEW
@@ -76,6 +76,6 @@ int main()
 *  
 * The compare() function returns two different things. If both are equal, it will return 0, 
   If the mismatch is found for character s and t, and when s is less than t, then it returns -1
-  otherwise when s is larger than t then it returns +1. It checks the matching using the ASCII code.
+  otherwise when s is larger than t then it returns 1. It checks the matching using the ASCII code.
 
 */
