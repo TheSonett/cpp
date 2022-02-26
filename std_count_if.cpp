@@ -24,6 +24,8 @@ int main()
             return x % 2 == 0;
     });
 
+    std::cout << "Count: " << n << "\n";
+
     vect1.resize(n);
     vect2.resize(vect.size() - n);
 

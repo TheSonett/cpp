@@ -9,14 +9,13 @@
 #include <iostream>
 
 struct Entity {
-	int dx, dy;
+	int dx = 0, dy = 0;
 
 	int x = 10;
 	int y = 20;
-};
+} e;
 
 static Entity GetValue() {
-	Entity e;
 	return { e.x, e.y };
 }
 

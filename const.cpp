@@ -3,9 +3,7 @@
 int main()
 {
 	// You cannot change the content of a variable but you can change the address of this pointer to point some other variable.
-	const int *a = new int; // same -> int const *a = new int;
-
-	// It means you can change the contents of the pointer but you cannot change the address. Means you cannot point to some other variable.
+	const int *a = new int; // or
 	int* const b = new int;
 
 	// It means you cannot change the contents of that pointer as well as you cannot reassign the actual value it'self
@@ -28,10 +26,10 @@ int main()
 	//*c = 40; // not possible
 
 
-	// breaking promise
+	//------------------ breaking promise --------------------
 	int* ptr = const_cast<int*>(c);
-	ptr = &f; // not possible
-	*ptr = 40; // not possible
+	ptr = &f; // possible
+	*ptr = 40; // possible
 
 	std::cout << *ptr << std::endl;
 
