@@ -15,7 +15,7 @@ int main()
 	for (std::vector<int> values = { 10,20,30,40 }; int& i: values) {
 		std::cout << i << " ";
 	}
-
+	
 	std::cout << std::endl;
 	std::for_each(values.begin(), values.end(), [](int i) {
 		std::cout << i << " ";
