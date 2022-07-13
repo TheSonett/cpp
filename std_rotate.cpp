@@ -9,7 +9,6 @@ int isRefectionPosiible(std::string& word1, std::string& word2) {
 	// if size doesn't match, then simplily return -1
 	if (word1.length() != word2.length()) {
 		answer = -1;
-		return answer;
 	}
 	else {
 		std::string total = word1 + word1;
@@ -21,7 +20,6 @@ int isRefectionPosiible(std::string& word1, std::string& word2) {
 		}
 	}
 
-	answer = -1;
 	return answer;
 }
 
