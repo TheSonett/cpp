@@ -9,6 +9,7 @@ int main()
 	StringSet.insert("SONETT");
 	StringSet.insert("KONICA");
 	StringSet.insert("JHANTU");
+	StringSet.insert("JHANTU"); // repeated value will not show
 
 	std::string key = "JOY";
 
