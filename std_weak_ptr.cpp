@@ -17,21 +17,22 @@ public:
 		std::cout << "It is printing something\n";
 	}
 
-	void setValue(std::unique_ptr<Entity>& entity) {
-		entity->age = 24;
-		std::cout << entity->age << std::endl;
+	void setValue(std::weak_ptr<Entity> entity) {
+		
 	}
 };
 
 
-
 int main()
 {
-	std::unique_ptr<Entity> e1;
 	{
-		std::unique_ptr<Entity> entity = std::make_unique<Entity>();
-		entity->setValue(entity);
+		std::weak_ptr<Entity> e1;
+		{
+			std::weak_ptr<Entity> entity = std::make_shared<Entity>();
+			e1 = entity;
+		}
 	}
+
 
 	std::cin.get();
 }

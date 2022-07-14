@@ -20,10 +20,11 @@ struct Timer
 	~Timer()
 	{
 		end = std::chrono::high_resolution_clock::now();
-		duration = start - end;
+		duration = end - start;
 
-		float ms = duration.count() * 1000.0f; // gives us the time in miliseccond
-		std::cout << "Timer took " << ms << "ms\n";
+		//float ms = duration.count() * 1000.0f; // gives us the time in miliseccond
+		std::chrono::seconds seconds = std::chrono::duration_cast<std::chrono::seconds>(duration);
+		std::cout << "Timer took " << seconds << "\n";
 	}
 };
 
